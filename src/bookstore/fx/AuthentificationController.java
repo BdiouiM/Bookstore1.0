@@ -105,12 +105,12 @@ public class AuthentificationController implements Initializable {
             System.err.println("erreur dans iu btc" + e);
             }
         }
-          /* else if (sa.livreurauthentification(user, pass))
+           else if (sa.livreurauthentification(user, pass))
         {
             
              try {
                  String u=username.getText();
-             FXMLLoader loader=new FXMLLoader(getClass().getResource("IU_livreur.fxml"));
+             FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/livraison/IU_livreur.fxml"));
              
              Parent root1=(Parent) loader.load();
             
@@ -123,7 +123,7 @@ public class AuthentificationController implements Initializable {
             } catch(Exception e) {
             System.err.println("erreur dans iu livreur" + e);
             }
-        }*/
+        }
         else
         {System.out.println("n'existe pas");
             alert(event);
