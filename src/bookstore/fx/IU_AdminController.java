@@ -6,6 +6,7 @@
 package bookstore.fx;
 
 import bookstore.fx.reclamation.TraiterReclamationController;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -44,7 +45,7 @@ public class IU_AdminController implements Initializable {
     private void IU_Reclamation(ActionEvent event) {
          try {
               String user=username.getText();
-             FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/reclamation/TraiterReclamation.fxml"));
+             FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/TraiterReclamation.fxml"));
              Parent root1=(Parent) loader.load();
              loadPage(root1);
              TraiterReclamationController iuTR = loader.getController();
@@ -55,7 +56,15 @@ public class IU_AdminController implements Initializable {
     }
 
     @FXML
-    private void IU_Livre(ActionEvent event) {
+    private void IU_Livre(ActionEvent event) throws IOException {
+          String user=username.getText();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/MesLivresAdmin.fxml"));
+        Parent root=(Parent) loader.load();
+      //  MesLivresAdminController cc = loader.getController();
+      //  cc.setUsername(user);
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML
@@ -63,7 +72,15 @@ public class IU_AdminController implements Initializable {
     }
 
     @FXML
-    private void IU_Echange(ActionEvent event) {
+    private void IU_Echange(ActionEvent event) throws IOException {
+        String user=username.getText();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/EchangeAdmin.fxml"));
+        Parent root=(Parent) loader.load();
+        //EchangeAdminController ea = loader.getController();
+        
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
     public void loadPage(Parent root){
        parentChildren.getChildren().removeAll();

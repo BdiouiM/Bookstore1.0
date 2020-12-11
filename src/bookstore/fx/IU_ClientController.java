@@ -6,6 +6,7 @@
 package bookstore.fx;
 
 import bookstore.fx.reclamation.EnvoyerReclamationController;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -44,7 +45,7 @@ public class IU_ClientController implements Initializable {
         
           try {
               String user=username.getText();
-             FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/reclamation/EnvoyerReclamation.fxml"));
+             FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/EnvoyerReclamation.fxml"));
              Parent root1=(Parent) loader.load();
              loadPage(root1);
              EnvoyerReclamationController iueR = loader.getController();
@@ -59,15 +60,49 @@ public class IU_ClientController implements Initializable {
     }
    
     @FXML
-    private void IU_Livre(ActionEvent event) {
+    private void IU_Livre(ActionEvent event) throws IOException {
+         String user=username.getText();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/MesLivresClient.fxml"));
+        Parent root=(Parent) loader.load();
+       // MesLivresClientController cc = loader.getController();
+       // cc.setUsername(user);
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML
-    private void IU_Compte(ActionEvent event) {
+    private void IU_Compte(ActionEvent event) throws IOException {
+         FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/Welcome.fxml"));
+        Parent root=(Parent) loader.load();
+        
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML
-    private void IU_Echange(ActionEvent event) {
+    private void IU_Echange(ActionEvent event) throws IOException {
+        String user=username.getText();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/ChoixClient.fxml"));
+        Parent root=(Parent) loader.load();
+   //     ChoixClientController cc = loader.getController();
+      //  cc.setUsername(user);
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    private void IU_Panier(ActionEvent event) throws IOException {
+        String user=username.getText();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/stock/GererPanier.fxml"));
+        Parent root=(Parent) loader.load();
+        //GererPanierController p=loader.getController();
+        //p.setUsername(user);
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
     
     
