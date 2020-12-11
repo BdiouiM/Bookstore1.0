@@ -25,6 +25,7 @@
                         <Font name="Comic Sans MS" size="28.0" />
                      </font>
                   </Label>
+                  <Button fx:id="mesRec1" mnemonicParsing="false" onAction="#MesLivres" styleClass="btn-menu" stylesheets="@../css/MenuButton.css" text="Retour à la liste des livres" />
                </children>
             </VBox>
             <VBox prefHeight="527.0" prefWidth="507.0">
@@ -136,7 +137,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="mesRec" mnemonicParsing="false" onAction="#MesLivres" styleClass="btn-menu" stylesheets="@../css/MenuButton.css" text="Retour à la liste des livres">
+                        <Button fx:id="ajouterPanier" mnemonicParsing="false" styleClass="btn-menu" stylesheets="@../css/MenuButton.css" text="ajouter Panier">
                            <HBox.margin>
                               <Insets right="70.0" />
                            </HBox.margin>
