@@ -10,7 +10,7 @@ import java.util.List;
 import bookstore.model.Book;
 import bookstore.connexion.My_connexion;
 import bookstore.Interface.InterfaceBook;
-//import bookstore.fx.MesLivresAdminController;
+import bookstore.fx.livre.MesLivresAdminController;
 
 public class ServiceBook implements InterfaceBook {
     My_connexion cnx;
