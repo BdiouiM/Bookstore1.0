@@ -80,7 +80,7 @@ public class HomeController implements Initializable {
 
     @FXML
     private void visiteur(ActionEvent event) throws IOException {
-          FXMLLoader loader=new FXMLLoader(getClass().getResource("Visiteur.fxml"));
+          FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/compte/Visiteur.fxml"));
              
              Parent root1=(Parent) loader.load();
           

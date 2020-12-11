@@ -95,8 +95,8 @@ public class AuthentificationController implements Initializable {
              Parent root1=(Parent) loader.load();
              UI_BuisnessToCustomerController btc = loader.getController();
              btc.setUser(u);
-            //IU_ClientController iuclient = loader.getController();
-             //iuclient.setUsername(user);
+            IU_ClientController iuclient = loader.getController();
+             iuclient.setUsername(user);
              Stage stage=new Stage();
              stage.setScene(new Scene(root1));
              stage.show();
@@ -114,8 +114,8 @@ public class AuthentificationController implements Initializable {
              
              Parent root1=(Parent) loader.load();
             
-            //IU_ClientController iuclient = loader.getController();
-             //iuclient.setUsername(user);
+             IU_ClientController iuclient = loader.getController();
+             iuclient.setUsername(user);
              Stage stage=new Stage();
              stage.setScene(new Scene(root1));
              stage.show();
