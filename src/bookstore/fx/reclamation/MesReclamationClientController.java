@@ -27,6 +27,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -58,12 +59,16 @@ public class MesReclamationClientController implements Initializable {
    ObservableList<Reclamation> reclamations = FXCollections.observableArrayList();
     @FXML
     private Label username;
+    @FXML
+    private TableView<Reclamation> table;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         InitColumn();
+       
+        
     }    
    public void InitColumn(){
            Date.setCellValueFactory(new PropertyValueFactory<>("DateReclamation"));
@@ -75,36 +80,36 @@ public class MesReclamationClientController implements Initializable {
     }
    public void setUsername(String user){
       this.username.setText(user);
-   }
-    public ObservableList<Reclamation> loadData(ObservableList<Reclamation> reclamations){
         try{
-               String userr = username.getText() ;
+               String userr = this.username.getText() ;
                bookstoreConnexion cnx=bookstoreConnexion.getIstance();
-               String req ="select * from reclamation where Identifiant="+userr;
+               String req ="select * from reclamation";
                Statement s= cnx.getConnection().createStatement();
                ResultSet rs = s.executeQuery(req);
                while(rs.next()){
-                   Reclamation r = new Reclamation();
+                   if(rs.getString("UsernameClient").equals(userr))
+                   {
+                       Reclamation r = new Reclamation();
+                   
                    r.setClientUsername(rs.getString("UsernameClient"));
                    r.setType(rs.getString("Type"));
                    r.setDateReclamation(rs.getString("DateReclamation"));
                    r.setStatutReclamation(rs.getString("StatutReclamation"));
                    r.setDescription(rs.getString("Description"));
                    r.setIdentifiant(rs.getInt("Identifiant"));
-                   
-                  /* Button annulerB= new Button("annuler"); 
-                   r.setAnnuler(annulerB);
-                   Button validerB= new Button("valider");
-                   r.setValider(validerB);*/
-                
                    reclamations.add(r);
+                   }
+                
+                   
                }
            }
            catch(Exception e){
                
            }
-        return reclamations;
-    }
+       
+        table.setItems(reclamations);
+   }
+  
     @FXML
     private void back(ActionEvent event) throws IOException {
        FXMLLoader loader=new FXMLLoader(getClass().getResource("EnvoyerReclamation.fxml"));

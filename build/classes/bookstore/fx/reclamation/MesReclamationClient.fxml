@@ -42,7 +42,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="400.0" prefWidth="0.0">
                            <children>
-                              <TableView prefHeight="400.0" prefWidth="500.0">
+                              <TableView fx:id="table" prefHeight="400.0" prefWidth="500.0">
                                 <columns>
                                   <TableColumn fx:id="Identifiant" prefWidth="75.0" text="Identifiant" />
                                   <TableColumn fx:id="Date" prefWidth="75.0" text="Date" />
