@@ -95,7 +95,7 @@ public class ServiceAuthentification implements AuthentificationInterface{
         }
         return false;
     }
-         @Override
+     @Override
     public boolean btcauthentification(String username, String password) {
          try {
             String req1= "select * from bussinessToCustomer ";
@@ -118,7 +118,7 @@ public class ServiceAuthentification implements AuthentificationInterface{
 
     @Override
     public boolean livreurauthentification(String username, String password) {
-          try {
+             try {
             String req1= "select * from livreur ";
             Statement s= cnx.getConnection().createStatement();
             ResultSet rs = s.executeQuery(req1);

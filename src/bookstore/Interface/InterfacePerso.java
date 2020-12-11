@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bookstore.service;
+package bookstore.Interface;
+
+import bookstore.model.Personnel;
 
 /**
  *
- * @author ASUS
+ * @author oumaima
  */
-public class ServiceLivreur1 {
-    
+public interface InterfacePerso {
+     public void modifierPerso(Personnel p, int CIN);
 }

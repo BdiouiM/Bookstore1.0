@@ -3,7 +3,7 @@ package bookstore.service;
 
 import bookstore.model.Remise;
 import bookstore.Interface.InterfaceUser;
-import bookstore.connexion.Myconnexion;
+import bookstore.connexion.My_connexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,9 +11,9 @@ import java.sql.Statement;
 
 
 public class ServiceUser implements InterfaceUser{
-    Myconnexion cnx ;
+    My_connexion cnx ;
     public  ServiceUser(){
-        cnx = Myconnexion.getInstance();
+        cnx = My_connexion.getIstance();
     }
     @Override
     public void ajouterRemise(Remise r) {
@@ -32,7 +32,7 @@ public class ServiceUser implements InterfaceUser{
             
             prep.setFloat(4,f-remise);
             prep.executeUpdate();
-            String req1 ="update  livre set prix ="+ nvpr + " where idLivre ="+r.getIdLivre();
+            String req1 ="update  livre set Prix ="+ nvpr + " where Id ="+r.getIdLivre();
             prep.executeUpdate(req1);
             
         } catch (SQLException ex) {
@@ -69,7 +69,7 @@ public class ServiceUser implements InterfaceUser{
             float var = 1-pourc;
             float nvpr =  selectPrix(idlivre)/var;
             String req = " delete  from remise where id="+r.getId();
-            String req1 ="update  livre set prix ="+ nvpr + " where idLivre ="+idlivre;
+            String req1 ="update  livre set Prix ="+ nvpr + " where Id ="+idlivre;
             PreparedStatement s = cnx.getConnection().prepareStatement(req1);
             PreparedStatement s1 = cnx.getConnection().prepareStatement(req);
             
@@ -93,13 +93,13 @@ public class ServiceUser implements InterfaceUser{
     public float selectPrix(int id) {
         try {
             
-            String req = "select prix from livre where idLivre ="+id;
+            String req = "select prix from livre where Id ="+id;
             Statement s2 = cnx.getConnection().createStatement();
             
             ResultSet rs = s2.executeQuery(req);
             rs.next();
             
-            return rs.getFloat("prix");
+            return rs.getFloat("Prix");
             
         } catch (SQLException ex) {
             return 0;
