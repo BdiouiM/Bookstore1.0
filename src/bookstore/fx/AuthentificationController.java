@@ -5,6 +5,7 @@
  */
 package bookstore.fx;
 
+import bookstore.fx.offre.UI_BuisnessToCustomerController;
 import bookstore.service.ServiceAuthentification;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -84,12 +85,12 @@ public class AuthentificationController implements Initializable {
             System.err.println("erreur dans iu client" + e);
             }
         }
-         /* else if (sa.btcauthentification(user, pass))
+         else if (sa.btcauthentification(user, pass))
         {
             
              try {
                  String u=username.getText();
-             FXMLLoader loader=new FXMLLoader(getClass().getResource("UI_BuisnessToCustomer.fxml"));
+             FXMLLoader loader=new FXMLLoader(getClass().getResource("/bookstore/fx/offre/UI_BuisnessToCustomer.fxml"));
              
              Parent root1=(Parent) loader.load();
              UI_BuisnessToCustomerController btc = loader.getController();
@@ -101,10 +102,10 @@ public class AuthentificationController implements Initializable {
              stage.show();
 
             } catch(Exception e) {
-            System.err.println("erreur dans iu client" + e);
+            System.err.println("erreur dans iu btc" + e);
             }
         }
-           else if (sa.livreurauthentification(user, pass))
+          /* else if (sa.livreurauthentification(user, pass))
         {
             
              try {
