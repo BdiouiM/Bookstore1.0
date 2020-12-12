@@ -113,6 +113,7 @@ public class FXMLDocumentController implements Initializable {
                             Livre l = new Livre(); 
                             Client c = new Client();
                             sp.supprimerLivrePanier(l, c);
+                            
             });
                 
                 

@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 import java.sql.PreparedStatement;
 import java.util.HashSet;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -100,15 +101,9 @@ public class ServicePanier implements InterfacePanier{
     @Override
     public void ValiderCommande() {
 //        application.getHostServices().showDocument("http://www.mywebsite.org"); //redirection 
+
+        JOptionPane.showMessageDialog(null, "Commande validée");
         
-//        try {
-//            String req= "UPDATE panier";
-//            PreparedStatement ps = cnx.getConnection().prepareStatement(req);
-//            ps.executeUpdate();
-            System.out.println("Commande validée");
-//        } catch (SQLException ex) {
-//            Logger.getLogger(ServicePanier.class.getName()).log(Level.SEVERE, null, ex);
-//        }
     }
 
 
