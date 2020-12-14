@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/model/Perso.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/css/MenuButton.css</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/PersonnelController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/css/Authentification.css</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/ValidationcodeController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/AccueilClientController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/Interface/InterfacePersonnel.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/SupprimerAdminController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/ConsulteradminController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/service/ServicePersonnel.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/model/Utilisateur.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/service/ServiceClient.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/model/Client.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/validationcode.fxml</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/model/Personnel.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/AccueilAdminController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/Interface/InterfaceClient.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/ajouteradminn.fxml</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/DesactiverClientController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/sendemail.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/ModifierClientController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/AccueilPersonnelController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/AjouteradminnController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/service/ServiceVisiteur.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/Book.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/VisiteurController.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/model/test.java</file>
+            <file>file:/C:/Users/oumaima/Documents/NetBeansProjects/Book/src/bookstore/fx/ModifierAdminController.java</file>
+        </group>
+    </open-files>
+</project-private>
